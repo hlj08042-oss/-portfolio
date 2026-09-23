@@ -27,6 +27,8 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           enablement: true
+      - name: Restore original high-resolution PDF
+        run: cat .portfolio-parts/portfolio.part.* > assets/wang-xinyu-portfolio.pdf
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
